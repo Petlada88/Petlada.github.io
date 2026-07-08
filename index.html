@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petlada Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Merriweather , Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #111111;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #aa1128;
+            color: #000000;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .navbar h1 {
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #b7b7b5;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('IMG_20260707_233410_247.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #333333;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #C8102E;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        section h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            color: #eaeaea;
+        }
+
+        section h3::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #888888;
+            margin: 0.5rem auto 0 auto;
+        }
+
+        .about-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .sop-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 70%;
+            margin: 0 auto;
+         }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            text-align: center;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 1rem;
+            }
+            .nav-links li {
+                margin: 0 1rem;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1> Petlada </h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#Sop">Sop</a></li>            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>นางสาว เพชรลดา พินิจจินดาพันธุ์ </h2>
+        <p> เลขที่8 ม.6/3 แผนการเรียน  ศิลปะการแสดง <i class="fa-solid fa-gear"></i> </p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <h3> Meet Me </h3>
+            <div class="about-content">
+                <p> ทุกภาพมีเรื่องราว ทุกเรื่องราวมีความหมาย </p>
+            </div>
+        </section>
+        <div class="container">
+        <section id="sop">
+            <h3>Sop</h3>
+            <div class="sop-content">
+                <p> สวัสดีค่ะ ดิฉัน นางสาวเพชรลดา  พินิจจินดาพันธุ์ อายุ 17 ปี ระดับชั้นมัธยมศึกษาปีที่ 6 ปัจจุบันศึกษาอยู่ที่โรงเรียนเซนต์โยเซฟทิพวัล เรียนสายศิลป์การแสดง
+ดิฉันมีความใฝ่ฝันที่อยากจะเป็น นักเขียนนิยาย เนื่องจากดิฉันมีความชื่นชอบที่จะได้สร้างสรรค์เรื่องราว ตัวละคร และการถ่ายทอดอารมณ์ความรู้สึกต่างๆ ในแบบของตนเองให้ผู้อื่นได้อ่าน นอกจากนี้ดิฉันยังสนใจเกี่ยวกับการนำเรื่องราวจากตัวหนังสือไปพัฒนาต่อให้กลายเป็นภาพเคลื่อนไหวที่อยู่บนหน้าจอ เพราะดิฉันเชื่อว่าภาพยนตร์จะเป็นอีกหนึ่งรูปแบบที่สำคัญที่จะสามารถถ่ายทอดอารมณ์ความรู้สึกของตัวละครให้ผู้ชมได้เข้าใจอย่างลึกซึ้งค่ะ นอกจากที่ดิฉันมีความสนใจในด้านการเขียนนิยายแล้ว ดิฉันยังให้ความสำคัญเกี่ยวกับงานเบื้องหลังการผลิตภาพยนตร์ โดยเฉพาะด้านการเขียนบท การวางโครงเรื่อง การลำดับเหตุการณ์ต่างๆ และการทำงานร่วนกันเป็นทีม ดิฉันเชื่อว่าการทำงานเบื้องหลังเป็นอีกหนึ่งความสำคัญที่จะทำให้ภาพยนตร์เรื่องนั้นประสบความสำเร็จได้ ฉันจึงมีความสนใจอย่างจริงจังในกระบวนการทำงานเบื้องหลัง และตองการพัฒนาทักษะด้านการเล่าเรื่องให้สอดคล้องกับสื่อภาพเคลื่อนไหว ด้วยความสนใจด้านนี้ทำให้ดิฉันมีความสนใจในคณะ นิเทศศาสตร์ สาขาวิชาภาพยนตร์และสื่อดิจิทัล มหาวิทยาลัยศรัปทุม ในอนาคต  ดิฉันตั้งใจจะนำความรู้ที่ได้ไปต่อยอดสู่การเขียนบทภาพยนตร์ หรือการพัฒนาเนื้อเรื่องจากนิยายของตนเอง ฉันเชื่อว่าการศึกษาในสาขาภาพยนตร์จะช่วยให้ฉันเข้าใจการเล่าเรื่องอย่างลึกซึ้ง และสามารถสร้างสรรค์ผลงานที่มีคุณค่าในวงการสื่อและภาพยนตร์ได้อย่างยั่งยืน </p>
+            </div>
+        </section>
+        <section id="projects">
+            <h3> Projects </h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>Project One Title</h4>
+                        <p>  </p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>Project Two Title</h4>
+                        <p>  </p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>Project Three Title</h4>
+                        <p>  </p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h3> Contact </h3>
+            <div class="contact-info">
+                <p> Email : Classp6112929@sjt.ac.th <p>
